@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(CodeCommerce\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->safeEmail,
@@ -21,7 +21,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 });
 
 
-$factory->define(App\Category::class, function (Faker\Generator $faker) {
+$factory->define(CodeCommerce\Category::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->word(),
         'description' => $faker->sentence(),
@@ -29,7 +29,7 @@ $factory->define(App\Category::class, function (Faker\Generator $faker) {
 });
 
 
-$factory->define(App\Product::class, function (Faker\Generator $faker) {
+$factory->define(CodeCommerce\Product::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->word(),
         'description' => $faker->sentence(),

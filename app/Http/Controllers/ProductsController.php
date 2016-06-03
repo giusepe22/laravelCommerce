@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace CodeCommerce\Http\Controllers;
 
-use App\Http\Requests;
-use App\Product;
+use CodeCommerce\Http\Requests;
+use CodeCommerce\Product;
 
 class ProductsController extends Controller
 {

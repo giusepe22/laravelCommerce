@@ -43,7 +43,7 @@ Route::get('exemplo', 'HomeController@exemplo');
 
 //Route::get('category/{id}', function($id)
 //{
-//    $ca = new \App\Category();
+//    $ca = new \CodeCommerce\Category();
 //    $c = $ca->find($id);
 //
 //    return $c->name;

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace CodeCommerce\Http\Controllers;
 
-use App\Category;
-use App\Http\Controllers\Controller;
+use CodeCommerce\Category;
+use CodeCommerce\Http\Controllers\Controller;
 
-use App\Http\Requests;
+use CodeCommerce\Http\Requests;
 
 class CategoriesController extends Controller {
 	private $categoryModel;
