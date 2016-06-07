@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use CodeCommerce\Category;
+use Faker\Factory as Faker;
 
 class CategoryTableSeeder extends Seeder {
 	/**
@@ -11,16 +13,17 @@ class CategoryTableSeeder extends Seeder {
 	public function run() {
 		DB::table('categories')->truncate();
 
-		factory('CodeComerce\Category', 10)->create();
+		#factory('CodeComerce\Category', 10)->create();
 
-		#$faker = Faker::create();
+		$faker = Faker::create();
 
-		//        foreach (range(1, 15) as $i) {
-		//
-		//            Category::create([
-		//                'name' => $faker->word(),
-		//                'description' => $faker->sentence()
-		//            ]);
-		//        ?}
+		        foreach (range(1, 15) as $i) {
+
+		           Category::create([
+		                'name' => $faker->word(),
+		                'description' => $faker->sentence()
+		            ]);
+				}
+
 	}
 }
