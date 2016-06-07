@@ -8,19 +8,19 @@
             @if($errors->any())
 
                 <ul class="alert-danger">
-
                     @foreach($errors->all() as $erro)
-
                         <li>{{$erro}}</li>
-
                     @endforeach
-
                 </ul>
 
             @endif
 
             {!! Form::open(['route' => ['products.update', $products->id], 'method' => 'put']) !!}
-
+            <div class="form-group">
+                {!! Form::label('category', 'Cateogry:') !!}
+                {!! Form::select('category_id', $categories, $products->category->id, ['class'=>'form-control']) !!}
+            </div>
+            
             <div class="form-group">
                 {!! Form::label('name', 'Name:') !!}
                 {!! Form::text('name', $products->name, ['class'=>'form-control']) !!}
