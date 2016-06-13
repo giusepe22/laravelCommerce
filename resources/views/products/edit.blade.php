@@ -17,7 +17,7 @@
 
             {!! Form::open(['route' => ['products.update', $products->id], 'method' => 'put']) !!}
             <div class="form-group">
-                {!! Form::label('category', 'Cateogry:') !!}
+                {!! Form::label('category', 'Category:') !!}
                 {!! Form::select('category_id', $categories, $products->category->id, ['class'=>'form-control']) !!}
             </div>
             

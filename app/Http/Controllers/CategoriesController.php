@@ -15,7 +15,7 @@ class CategoriesController extends Controller {
 	}
 
 	public function index() {
-		$categories = $this->categoryModel->paginate(10);
+		$categories = $this->categoryModel->paginate(10);// paginado miinha index listagem
 
 		return view('categories.index', compact('categories'));
 	}

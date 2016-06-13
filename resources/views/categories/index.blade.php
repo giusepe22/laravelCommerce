@@ -34,7 +34,7 @@
 
                         </table>
                     
-                    {!! $categories->render()!!}
+                    {!! $categories->render()!!} <!-- ajustando a paginate com render -->
                     {{--<!--</div>-->--}}
                 {{--</div>--}}
             {{--</div>--}}

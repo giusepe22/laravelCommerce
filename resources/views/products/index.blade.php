@@ -39,7 +39,7 @@
 
                         </table>
                     
-                    {!! $products->render() !!}
+                    {!! $products->render() !!}<!-- ajutando o paginate com render -->
                     {{--<!--</div>-->--}}
                 {{--</div>--}}
             {{--</div>--}}
