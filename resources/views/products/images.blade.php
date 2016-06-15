@@ -21,7 +21,7 @@
                                  <th>Action</th>
                             </tr>
                             
-                            @foreach($products->images as $image)
+                            @foreach($product->images as $image)
                             <tr>
                                 <td>{{ $image->id }}</td>
                                  <td></td>
@@ -35,7 +35,7 @@
 
                         </table>
                     
-                 <!--    {!! $product->images->render() !!}ajutando o paginate com render -->
+                 <!--    {!! $product->images()->paginate()->render() !!}  ajutando o paginate com render -->
                     {{--<!--</div>-->--}}
                 {{--</div>--}}
             {{--</div>--}}

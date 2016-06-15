@@ -22,8 +22,8 @@ Route::group(['prefix' => 'admin', 'where' => ['id' => '[0-9]+']], function() {
         Route::put('{id}/update', ['as' => 'products.update', 'uses' => 'ProductsController@update']);
 
         Route::group(['prefix' => 'images'], function () {
-                //site.com.br/admin/products/iamges/{id}product
-            Route::get('{id}/images', ['as' => 'products.images', 'uses' => 'ProductsController@images']);
+                //site.com.br/admin/products/images/{id}/product
+            Route::get('{id}/product', ['as' => 'products.images', 'uses' => 'ProductsController@images']);
         });
     });
 });
