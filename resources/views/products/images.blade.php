@@ -30,7 +30,7 @@
                                <td>{{ $image->extension }}</td>
 
                                <td>
-                                   <a href="{{ route('products.images.destroy', ['id'=>$image->id]) }}">Delete</a>
+                                   <a href="{{ route('products.images.destroy', ['id'=>$image->id]) }}" class="btn btn-info">Delete</a>
                                </td>
 
                             </tr>

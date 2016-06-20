@@ -75,12 +75,12 @@ class ProductsController extends Controller {
 
     public function storeImage(Requests\ProductImageRequest $request, $id, ProductImage $productImage){
 
-        $file = $request->file('image');
-        $extension = $file->getClientOriginalExtension();
+        $file = $request->file('image');  //pegando o arquivo la do form
+        $extension = $file->getClientOriginalExtension(); //pegando a extension do arquivo
 
-        $image = $productImage::create(['product_id'=>$id, 'extension'=>$extension]);
+        $image = $productImage::create(['product_id'=>$id, 'extension'=>$extension]);// gravando no banco de dados
 
-        Storage::disk('public_local')->put($image->id.'.'.$extension, File::get($file));
+        Storage::disk('public_local')->put($image->id.'.'.$extension, File::get($file)); // gravando no disk local
 
         return redirect()->route('products.images', ['id'=>$id]);
 
@@ -88,7 +88,7 @@ class ProductsController extends Controller {
 
     public function destroyImage(ProductImage $productImage, $id){
 
-        $image = $productImage->find($id);
+        $image = $productImage->find($id);// o id da image que eu quero remover
 
         if (file_exists(public_path().'/uploads/'.$image->id.'.'.$image->extension)) { // verificando se existe image
             Storage::disk('public_local')->delete($image->id.'.'. $image->extension);// remoção do cara

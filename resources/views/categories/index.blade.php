@@ -26,8 +26,8 @@
                                 <td>{{$category->name}}</td>
                                 <td>{{$category->description}}</td>
                                 <td>
-                                    <a href="{{ route('categories.edit', ['id' => $category->id]) }}">Edit</a>|
-                                    <a href="{{ route('categories.destroy', ['id' => $category->id]) }}">Delete</a>
+                                    <a href="{{ route('categories.edit', ['id' => $category->id]) }}" class="btn btn-default btn-xs btn-info">Edit</a>
+                                    <a href="{{ route('categories.destroy', ['id' => $category->id]) }}" class="btn btn-default btn-xs btn-danger">Delete</a>
                                 </td>
                             </tr>
                              @endforeach
