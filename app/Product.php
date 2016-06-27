@@ -15,7 +15,7 @@ class Product extends Model {
         'description',
         'price',
         'featured',
-        'recommended'
+        'recommend'
     ];
 
     public function images() {// pra saber as imagens relacionada co meu produto
@@ -45,5 +45,20 @@ class Product extends Model {
         return implode('', $tags);
     }
 
+    /**
+     * @return
+     */
+    public function scopeFeatured($query)
+    {
+        return $query->where('featured', '=', 1);
+    }
+
+    /**
+     * @return
+     */
+    public function scopeRecommend($query)
+    {
+        return $query->where('recommend', '=', 1);
+    }
 
 }

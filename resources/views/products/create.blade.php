@@ -42,8 +42,8 @@
             {!! Form::label('featured', 'Featured:') !!}
             {!! Form::checkbox('featured', null, ['class' => 'form-control']) !!}
 
-            {!! Form::label('recommend', 'Recommend:') !!}
-            {!! Form::checkbox('recommend', null, ['class' => 'form-control']) !!}
+            {!! Form::label('recommended', 'Recommended:') !!}
+            {!! Form::checkbox('recommended', null, ['class' => 'form-control']) !!}
         </div>
 
         <div class="form-group">

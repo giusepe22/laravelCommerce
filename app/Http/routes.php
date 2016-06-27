@@ -31,11 +31,17 @@ Route::group(['prefix' => 'admin', 'where' => ['id' => '[0-9]+']], function() {
     });
 });
 
+Route::get('/', 'StoreController@index');
+
+Route::controllers([
+    'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
+]);
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Route::get('home', [
     'as' => 'home',
@@ -43,7 +49,6 @@ Route::get('home', [
 ]);
 
 Route::get('exemplo', 'HomeController@exemplo');
-
 
 //Route::get('category/{id}', function($id)
 //{
