@@ -1,13 +1,13 @@
 
-@extends('store.store')
+@extends('store.store') <!-- herdando o template principal la no store-->
 
 @section('categories')
 
-    @include('store.categories_partial')
+    @include('store.categories_partial') <!-- herdando o template da parte de categorias la no store-->
 
 @stop
 
-@section('content')
+@section('content')  <!-- herdando o content do store-->
 
     <div class="col-sm-9 padding-right">
         <div class="features_items"><!--features_items-->
