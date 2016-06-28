@@ -46,7 +46,7 @@ class Product extends Model {
     }
 
     /**
-     * @return
+     * @return ---> consulta de scopo local
      */
     public function scopeFeatured($query)
     {
@@ -54,11 +54,19 @@ class Product extends Model {
     }
 
     /**
-     * @return
+     * @return  ---> consulta de scopo local
      */
     public function scopeRecommend($query)
     {
         return $query->where('recommend', '=', 1);
+    }
+
+    /**
+     * @return  ---> consulta de scopo Global
+     */
+    public function scopeOfCategory($query, $type){
+
+        return $query->where('category_id','=', $type);
     }
 
 }

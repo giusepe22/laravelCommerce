@@ -20,11 +20,27 @@ class StoreController extends Controller
     public function index()
     {
         $pFeatured = Product::featured()->get();
-        $pRecommend = Product::recommend()->get();
-
+        $pRecommend = Product::recommend()->get();// pegando os produtos recomendados
         $categories = Category::all();
 
         return view('store.index', compact('categories', 'pFeatured', 'pRecommend'));
+    }
+
+    public function category($id){
+        $categories = Category::all(); // lista de categories
+        $category = Category::find($id); // para pegar o id da category atual
+        $products = Product::ofCategory($id)->get(); // pegando produtos referente a category pelo scopeOfCategory
+
+        return view('store.category', compact('categories', 'category', 'products'));
+
+    }
+    
+    public function product($id){
+        
+        $categories = Category::all();
+        $product = Product::find($id);
+        
+        return view('store.product', compact('categories', 'product'));
     }
 
     /**
