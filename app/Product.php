@@ -48,21 +48,21 @@ class Product extends Model {
     /**
      * @return ---> consulta de scopo local
      */
-    public function scopeFeatured($query)
+    public function scopeFeatured($query) // regra de negocio
     {
         return $query->where('featured', '=', 1);
     }
 
     /**
-     * @return  ---> consulta de scopo local
+     * @return  ---> consulta de scopo Local
      */
-    public function scopeRecommend($query)
+    public function scopeRecommend($query) // regra de negocio
     {
         return $query->where('recommend', '=', 1);
     }
 
     /**
-     * @return  ---> consulta de scopo Global
+     * @return  --->  scopo Global
      */
     public function scopeOfCategory($query, $type){
 

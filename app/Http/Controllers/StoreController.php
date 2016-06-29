@@ -19,7 +19,7 @@ class StoreController extends Controller
      */
     public function index()
     {
-        $pFeatured = Product::featured()->get();
+        $pFeatured = Product::featured()->get();  // pegando os produtos featured
         $pRecommend = Product::recommend()->get();// pegando os produtos recomendados
         $categories = Category::all();
 
@@ -39,7 +39,7 @@ class StoreController extends Controller
         
         $categories = Category::all();
         $product = Product::find($id);
-        
+
         return view('store.product', compact('categories', 'product'));
     }
 

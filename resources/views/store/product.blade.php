@@ -8,8 +8,6 @@
 
 @section('content')  <!-- herdando o content do store-->
 
-
-
 <div class="col-sm-9 padding-right">
     <div class="product-details"><!--product-details-->
         <div class="col-sm-5">
@@ -27,7 +25,7 @@
                 <div class="carousel-inner">
                     <div class="item active">
 
-                        @foreach($product->images as images)
+                        @foreach($product->images as $images)
                             <a href="#"><img src="{{ url('uploads/'.$images->id.'.'.$images->extension) }}" alt="" width="80"></a>
                         @endforeach
 
@@ -44,6 +42,7 @@
                 <h2>{{ $product->category->name }} :: {{ $product->name }}</h2>
 
                 <p>{{ $product->description }}</p>
+
                                 <span>
                                     <span>R$ {{ number_format($product->price,2,",",".") }}</span>
                                         <a href="#" class="btn btn-fefault cart">

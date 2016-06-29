@@ -13,7 +13,7 @@
         <div class="features_items"><!--features_items-->
             <h2 class="title text-center">Em destaque</h2>
 
-            @include('store.partial.product', ['products' => $pFeatured])    <!-- reaproveitando e recuperando o pedaço PRODUCT  e falando que products é $pFeatures-->
+            @include('store.partial.product', ['products' => $pFeatured])    <!-- (jogando a parte de porduto featured) - reaproveitando e recuperando o pedaço PRODUCT  e falando que products é $pFeatures-->
 
 
         </div><!--features_items-->
@@ -22,7 +22,7 @@
         <div class="features_items"><!--recommended-->
             <h2 class="title text-center">Recomendados</h2>
 
-            @include('store.partial.product', ['products' => $pRecommend])    <!-- reaproveitando e recuperando o pedaço PRODUCT  e falando que products é $pFeatures-->
+            @include('store.partial.product', ['products' => $pRecommend])    <!-- (jogando a parte de porduto recomended)  reaproveitando e recuperando o pedaço PRODUCT  e falando que products é $pFeatures-->
 
         </div><!--recommended-->
 
